@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gestão de pessoas</title>
+
+    <style>
+    .main {
+      padding: 5px;
+    }
+
+    p,
+    td {
+      color: #919191;
+    }
+
+    td {
+      border-bottom: 2px solid black;
+      border-color: #f4f6fa;
+      padding: 5px 2px;
+    }
+
+    .schedule__title {
+      color: #4b7596;
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    .table__header {
+      color: #4b7596;
+      font-size: 12px;
+      font-weight: bold;
+      background-color: #f4f6fa;
+    }
+
+    .text__left {
+      text-align: left;
+    }
+
+    .text__center {
+      text-align: center;
+    }
+
+    .late {
+      color: #f2994a;
+      font-weight: bold;
+    }
+    </style>
+</head>
+
+<body>
+<div class="main">
+    <div class="main__greetings">
+        <p>Olá,</p>
+    </div>
+
+    <div class="main__schedule">
+        <div class="schedule__table">
+            <table>
+                <tr class="table__header">
+                    <th style="min-width: 90px; text-align: center; padding: 10px;">Nome</th>
+                    <th style="width: 100%; text-align: left; padding: 10px;">Sobrenome</th>
+                </tr>
+                <tr >
+                    <td style="text-align: left;" th:text="${user.name}"></td>
+                    <td style="text-align: left;" th:text="${user.lastName}"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="main__footer">
+        <p>Atenciosamente,</p>
+        <p><strong>Equipe Interna.</strong></p>
+    </div>
+</div>
+</body>
+
+</html>
